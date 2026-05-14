@@ -11,29 +11,72 @@
     "splash": {
       "image": "./assets/images/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#0a0a0c"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.hsad.alertsportal"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#0a0a0c"
       },
+      "package": "com.hsad.alertsportal",
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/favicon.png",
+      "name": "HSAD Alerts",
+      "shortName": "HSAD Alerts",
+      "description": "HSAD Portal for alerts and notifications",
+      "backgroundColor": "#0a0a0c",
+      "themeColor": "#3b82f6",
+      "display": "standalone",
+      "startUrl": "/",
+      "applicationId": "com.hsad.alertsportal",
+      "config": {
+        "pwa": {
+          "manifest": {
+            "name": "HSAD Alerts",
+            "short_name": "HSAD Alerts",
+            "description": "HSAD Portal for alerts and notifications",
+            "background_color": "#0a0a0c",
+            "theme_color": "#3b82f6",
+            "display": "standalone",
+            "scope": "/",
+            "start_url": "/",
+            "icons": [
+              {
+                "src": "./assets/images/icon.png",
+                "sizes": "512x512",
+                "type": "image/png"
+              }
+            ]
+          }
+        }
+      }
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      "expo-notifications"
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "35ca3433-428a-46eb-943f-5a3e2aa771d9"
+      }
+    },
+    "owner": "bilawalhussain5646",
+    "notification": {
+      "vapidPublicKey": "BDwRPB-QtWQvwhiBWny6jYF9EDpmcQYITE2k0_MHB8KfudSpCXAO3w8w6xJodvM7ha79xjnJ4yjm-e0JK8LVUis",
+      "serviceWorkerPath": "/expo-service-worker.js"
     }
   }
 }
